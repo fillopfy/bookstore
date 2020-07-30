@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Heading from './Heading/Heading.js';
+import Books from './Books/Books.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            items:[],
+            isLoaded:false
+        }
+    }
+
+    componentDidMount(){
+        fetch('https://www.googleapis.com/books/v1/volumes?filter=free-ebooks&q=a')
+            .then(res=>res.json())
+            .then(res => {
+                this.setState({
+                    isLoaded:true,
+                    items:res.items, 
+                })
+            });
+    }
+
+    render(){
+        var { isLoaded, items } = this.state;
+        if(!isLoaded){
+            return <div>Loading.....Please Wait!</div>
+        }
+        return(
+            <>
+                <Heading/>
+                <Books/>
+                <ul>
+                    {items.map(item=>(
+                        <li key={item.id}>
+                            {item.volumeInfo.title}
+                        </li>
+                    ))}
+                </ul>
+            </>
+        );
+    }
 }
+
 
 export default App;
