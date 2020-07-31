@@ -19,7 +19,7 @@ const Book = ({index, book})=>{
             <p className="card-text"><strong>Published Date:</strong>  {cleanedDate}</p>
             <p className="card-text"><strong>Title:</strong>  {book.volumeInfo.title}</p>
             <p className="card-text"><strong>Subtitle:</strong>  {(book.volumeInfo.subtitle)?book.volumeInfo.subtitle:"Not available"}</p>
-            <br/><br/>
+            
             <button className="btn btn-primary btn-lg mt-auto">See More</button>
             
             </div>
