@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-// import Heading from './Heading/Heading.js';
-// import Books from './Books/Books.js';
+
 
 function App(){
     const [books, setBooks]=useState(null);
@@ -15,6 +15,7 @@ function App(){
 
 
     return(
+        <>
         <div className="App">
             <h1>Open Book Library</h1>
             <h2>Fetch a list of books and display it</h2>
@@ -39,14 +40,23 @@ function App(){
                     books.map((book, index)=>{
                         const cleanedDate = book.volumeInfo.publishedDate.toString();
                         const authors= (book.volumeInfo.authors)?book.volumeInfo.authors.join(", "):"";
+                        const imageurl=book.volumeInfo.imageLinks.thumbnail;
 
                         return(
                             <div className="book" key={index}>
                                 <h3>Book {index+1}</h3>
                                 <h2>{book.volumeInfo.title}</h2>
+                                <br/><br/>
 
                                 <div className="details">
-                                    <p><strong>Authors:</strong>  {authors}</p>
+
+                                
+                                    <img className="image" src={imageurl} alt="thumbnail"/>
+                                    
+
+
+                                    <br/><br/>
+                                    <p><strong>Author:</strong>  {authors}</p>
                                     <br/>
                                     <p><strong>Published Date:</strong>  {cleanedDate}</p>
                                     <br/>
@@ -54,6 +64,11 @@ function App(){
                                     <br/>
                                     <p><strong>Subtitle:</strong>  {(book.volumeInfo.subtitle)?book.volumeInfo.subtitle:"Not available"}</p>
                                     <br/>
+                                    <br/>
+                                    <button className="fetch-button more">See More</button>
+                                    <br/>
+                                    <br/>
+                                    
                                 </div>
                             </div>
                         );
@@ -61,7 +76,13 @@ function App(){
                 }
             </div>
 
+            
+
         </div>
+
+
+        </>
+
     );
 }
 
