@@ -1,36 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Book from '../Book/Book.js';
 import './Books.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
-const Books = ()=>{
+
+const Books = ({books})=>{
     return(
-        <div className="whole">
-            <div className="row">
-                <Book className="book"/>
-                <Book className="book"/>
-                <Book className="book"/>
-                {/* <Book/> */}
+        <div className="d-flex flex-wrap">
+                {books && 
+                    books.map((book, index)=>{
+                        return(
+                            <Book key={index} book={book} />  
+                        );
+                    })
+                }
             </div>
-
-            <div className="row">
-                <Book/>
-                <Book/>
-                <Book/>
-            </div>
-
-            <div className="row">
-                <Book/>
-                <Book/>
-                <Book/>
-            </div>
-
-            <div className="row">
-                <Book/>
-                <Book/>
-                <Book/>
-            </div>
-        </div>
     );
 }
 

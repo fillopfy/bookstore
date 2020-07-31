@@ -1,16 +1,19 @@
 import React from 'react';
 import './Heading.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const Heading = ()=>{
+
+const Heading = ({fetchData})=>{
     return(
         <header>
-            <div className="header-part">
-            
-            <i className="fa fa-book fa-2x"></i>
-            </div>
-            
-            <div className="header-part">
-            <h1>Open Boook Store</h1>
+            <h1>Open Book Library</h1>
+            <h2>Fetch a list of books and display it</h2>
+            <div>
+                <button className="btn btn-success btn-lg mb-5"
+                        onClick={fetchData}
+                >
+                 Fetch Books   
+                </button>
             </div>
         </header>
     );
