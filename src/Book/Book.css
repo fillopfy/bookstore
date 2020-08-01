@@ -1,7 +1,54 @@
 .try{
-    width: 35rem;
-    margin:10px;
+    width: 23.5rem;
+    margin:15px;
 }
+
+@media screen and (max-width: 500px) {
+    .try {
+      width: 18rem;
+      margin:10px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .try {
+      width:28rem;
+      margin:20px;
+    }
+  }
+
+  /* @media screen and (max-width: 770px) {
+    .try {
+      width:32rem;
+      margin-left:65px;
+      margin-bottom:20px;
+    }
+  } */
+
+  @media screen and (max-width: 600px) {
+    .img {
+      display: block;
+      margin: auto;
+      width: 150px;
+      height: 200px;
+    }
+  }
+
+  .font-header{
+    font-family: 'Recursive', sans-serif;
+  }
+
+  .font{
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  @media screen and (max-width: 400px) {
+    .img {
+      display: block;
+      margin: auto;
+      width: 100px;
+      height: 150px;
+    }
+  }
 
 .img{
     display: block;
