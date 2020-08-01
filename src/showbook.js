@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
+import React from 'react';
+
 
 
 const Showbook = ({index, book})=>{

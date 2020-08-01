@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Book.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Showbook from '../showbook';
-import Heading from '../Heading/Heading';
 
 
 const Book = ({index, book})=>{

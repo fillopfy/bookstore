@@ -16,9 +16,9 @@ function App(){
     }
 
 
+    
     return(
         
-    // <Router>
         <div className="App text-center">
 
             <Heading fetchData={fetchData}/>
@@ -26,7 +26,6 @@ function App(){
             <Books books={books}/>
 
         </div>
-    // </Router>
     );
 }
 
