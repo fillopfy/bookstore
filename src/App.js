@@ -4,6 +4,8 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Heading from './Heading/Heading';
 import Books from './Books/Books';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 
 
 function App(){
@@ -15,17 +17,17 @@ function App(){
         setBooks(response.data.items);
     }
 
-
-    
+   
     return(
         
-        <div className="App text-center">
+        <div className="App">
 
             <Heading fetchData={fetchData}/>
 
             <Books books={books}/>
-
+        
         </div>
+        
     );
 }
 

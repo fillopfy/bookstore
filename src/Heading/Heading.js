@@ -9,7 +9,7 @@ const Heading = ({fetchData})=>{
             <h1 className="font-header">Open Book Library</h1>
             <h2>Fetch a list of books and display it</h2>
             <div>
-                <button className="btn btn-success btn-lg mb-5"
+                <button className="btn btn-success btn-lg mb-4"
                         onClick={fetchData}
                 >
                  Fetch Books   

@@ -1,16 +1,18 @@
 import React from 'react';
+// import book from './Book/Book';
 
 
 
-const Showbook = ({index, book})=>{
-    const cleanedDate = book.volumeInfo.publishedDate.toString();
-    const authors= (book.volumeInfo.authors)?book.volumeInfo.authors.join(", "):"";
-    const imageurl=book.volumeInfo.imageLinks.thumbnail;
+const Showbook = ()=>{
+    // const cleanedDate = book.volumeInfo.publishedDate.toString();
+    // const authors= (book.volumeInfo.authors)?book.volumeInfo.authors.join(", "):"";
+    // const imageurl=book.volumeInfo.imageLinks.thumbnail;
     return(
 
 
         <div className="card border-dark try">
-            <div className="card-header font-header"><h3>{book.volumeInfo.title}</h3></div>
+        Hello beta
+            {/* <div className="card-header font-header"><h3>{book.volumeInfo.title}</h3></div>
             <img src={imageurl} class="img " alt="thumbnail"/>
             <div className="card-body text-dark d-flex flex-column">
             <h5 className="card-title font">Book ID: {book.id}</h5>
@@ -21,7 +23,7 @@ const Showbook = ({index, book})=>{
             
            
             
-            </div>
+            </div> */}
         </div>
     
     );
