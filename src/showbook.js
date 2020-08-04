@@ -1,5 +1,5 @@
 import React from 'react';
-// import book from './Book/Book';
+ import book from './Book/Book';
 
 
 
@@ -11,8 +11,8 @@ const Showbook = ()=>{
 
 
         <div className="card border-dark try">
-        Hello beta
-            {/* <div className="card-header font-header"><h3>{book.volumeInfo.title}</h3></div>
+       
+            <div className="card-header font-header"><h3>{book.volumeInfo.title}</h3></div>
             <img src={imageurl} class="img " alt="thumbnail"/>
             <div className="card-body text-dark d-flex flex-column">
             <h5 className="card-title font">Book ID: {book.id}</h5>
@@ -23,7 +23,7 @@ const Showbook = ()=>{
             
            
             
-            </div> */}
+            </div>
         </div>
     
     );
